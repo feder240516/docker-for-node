@@ -6,5 +6,5 @@ router.post("/confirmar",(req,res) =>{
     res.end("<h1>Sergio gay</h1>")
 })
 
-router.use(express.static())
+// router.use(express.static())
 module.exports = router;

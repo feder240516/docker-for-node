@@ -4,7 +4,7 @@
   "description": "an awesome project for making polls using grid tecnology",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server/index.js", 
+    "start": "nodemon ./server/index.js",
     "heroku-prebuild": "cd ./client && npm install && npm run build"
   },
   "keywords": [
