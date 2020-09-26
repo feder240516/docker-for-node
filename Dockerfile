@@ -12,4 +12,4 @@ COPY . .
 # replace this with your application's default port
 EXPOSE 5000
 # run
-CMD [ "node", "server.js" ]
+CMD [ "node", "server/index.js" ]
