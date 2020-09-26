@@ -1,0 +1,24 @@
+{
+  "name": "grid-project",
+  "version": "1.0.0",
+  "description": "an awesome project for making polls using grid tecnology",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js", 
+    "heroku-prebuild": "cd ./client && npm install && npm run build"
+  },
+  "keywords": [
+    "grid",
+    "js"
+  ],
+  "author": "santiago murcia & federico reina",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
