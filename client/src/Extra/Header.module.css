@@ -1,0 +1,11 @@
+.header{
+  background: rgb(63,94,251);
+  background: linear-gradient(29deg, rgba(63,94,251,1) 0%, rgba(36,34,115,1) 100%);
+  grid-area: header;
+  /* height: 100%; */
+  text-align: center;
+  font-size: 48px;
+  overflow: hidden;
+  color: white;
+  /* flex: 0 1 auto; */
+}

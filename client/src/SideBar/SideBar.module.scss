@@ -1,0 +1,93 @@
+.sideBar{
+  grid-area: sidebar;
+  height: 100%;
+  // width: 200px;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(146,70,252,1) 100%);
+  position: relative;
+  font-size:18px;
+  // overflow-y: auto;
+  overflow-x: visible;
+  // padding: 10px 10px 0 10px;
+  
+  
+  &__item{
+    list-style: none;
+    padding: 5px;
+    // height: 30px;
+    vertical-align: middle;
+    margin: 5px 10px;
+    // padding:10px;
+    background-color: #ffffff40;
+    border-radius: 10px;
+    cursor:pointer;
+    // border: 1px solid black;
+
+    // text-indent: -20px;
+    &--selected{
+      background-color: #00000040;
+      padding: 5px 25px;
+    }
+
+  }
+
+  &__add{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    right: -25px;
+    background-color: yellow;
+    text-align: center;
+    border-radius: 25px;
+  }
+
+  & ul{
+    padding:0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sideBar {
+    position: absolute;
+    z-index: 30000;
+    width: 300px;
+    // top:0
+    // max-width: 0%;
+    // display: none;
+  }
+
+  .sideBar--close{
+    right: 100%;
+  }
+
+  .sideBar--open{
+    left: 0;
+  }
+}
+
+.icon{
+  color: gray;
+  // font-size:12px;
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.littleIcon{
+  font-size:16px;
+}
+
+.yellowBall{
+  background-color: yellow;
+  border-radius: 1000px;
+}
+
+.changeName{
+  background-color: transparent;
+  font-size: 12px;
+  border-color: black;
+  margin: 3px;
+  border-width: 0 0 3px 0;
+}

@@ -1,0 +1,158 @@
+h3 {
+  margin:0px;
+}
+
+.card{
+  /* background-color: red; */
+  width: auto;
+  // margin: 20px;
+  // border-radius: 10px;
+  
+  // border-width: 50px;
+  
+  
+  position:relative;
+  flex: 1 1 auto;
+  
+
+  &__header{
+    // text-align: center;
+    /* background-color: blue;  */
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    background: rgb(80,120,200);
+    background: linear-gradient(0deg, rgba(80,120,200,1) 0%, rgba(100,149,237,1) 100%);
+    user-select: none;
+    padding: 0 50px ;
+
+    // &:hover{
+    //   cursor: pointer;
+    // }
+
+    &__changeName{
+      background-color: transparent;
+      font-size: 24px;
+      border-color: black;
+      margin: 3px;
+      border-width: 0 0 3px 0;
+    }
+  }
+
+  &__body{
+    overflow: hidden; 
+
+    &--expanded{
+      /* background-color: chartreuse; */
+      // animation: opening 5s;
+      // height: 100%;
+    }
+
+    &--hidden{
+      max-height: 0px;
+      
+      /* animation: opening 5s infinite; */
+    }
+
+    &__subtask{
+      padding: 10px 15px;
+      
+    }
+
+    &__notask{
+      margin: 10px;
+      color: gray;
+      border: 3px dotted cyan;
+      cursor:pointer
+    }
+  }
+
+  &__shadow{
+    background: rgb(131,131,131);
+    background: linear-gradient(0deg, rgba(131,131,131,0.164) 0%, rgba(131,131,131,0) 100%);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    // border-radius: 10px;
+    pointer-events: none;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+  }
+}
+
+@keyframes opening{
+  0%{
+    height: 20px;
+  }
+  100%{
+    height: initial;
+  }
+}
+
+li.subTask{
+  list-style: none;
+  text-indent: -20px;
+  &::before{
+    
+    float: left;
+    width: 20px;
+    
+  }
+
+  &--complete::before{
+    font-family: "Material Icons";
+    content: "check_box";
+  }
+
+  &--incomplete::before{
+    font-family: "Material Icons";
+    content: "check_box_outline_blank";
+  }
+}
+
+.icon{
+  color: gray;
+  // font-size:12px;
+  &:hover{
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.littleIcon{
+  font-size:16px;
+}
+
+
+/*
+// codigo para colapsar las tarjetas
+// tomado de https://stackoverflow.com/a/43965099, y modificado
+
+.collapsible-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+.collapsible-wrapper:after {
+  content: '';
+  height: 50px;
+  transition: height 0.3s linear, max-height 0s 0.3s linear;
+  max-height: 0px;
+}
+.collapsible {
+  transition: margin-bottom 0.3s cubic-bezier(0, 0, 0, 1);
+  margin-bottom: 0;
+  max-height: 1000000px;
+}
+.collapsible-wrapper.collapsed > .collapsible {
+  margin-bottom: -2000px;
+  transition: margin-bottom 0.3s cubic-bezier(1, 0, 1, 1),
+              visibility 0s 0.3s, max-height 0s 0.3s;
+  visibility: hidden;
+  max-height: 0;
+}
+.collapsible-wrapper.collapsed:after
+{
+  height: 0;
+  transition: height 0.3s linear;
+  max-height: 50px;
+}*/
