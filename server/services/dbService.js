@@ -5,8 +5,10 @@ var con //= await mysql2.createConnection();
 
 async function initDb(){
   if (!con) {
+    let host;
+    
     con = mysql2.createPool({
-      host: "65.52.33.150",
+      host: "10.3.2.4",
       user: "callatealexa",
       password: "Madur0Castr0@",
       port: 3306,
