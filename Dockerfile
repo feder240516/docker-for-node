@@ -1,5 +1,7 @@
 # specify the node base image with your desired version node:<version>
 FROM node:12
+#install mysql
+RUN apt-get update && apt-get install -y mysql-client && rm -rf /var/lib/apt
 # Create app directory
 WORKDIR /usr/src/fede
 # Install app dependencies
