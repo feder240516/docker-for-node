@@ -14,6 +14,6 @@ RUN npm install
 COPY . .
 RUN npm run client-install
 # replace this with your application's default port
-EXPOSE 5000
+EXPOSE 8080
 # run
 CMD [ "node", "server/index.js" ]
