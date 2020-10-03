@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server/index.js",
+    "client-install": "cd ./client && npm install && npm run build",
     "heroku-prebuild": "cd ./client && npm install && npm run build"
   },
   "keywords": [

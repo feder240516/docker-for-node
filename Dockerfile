@@ -9,6 +9,7 @@ WORKDIR /usr/src/fede
 # where available (npm@5+)
 COPY package*.json ./
 RUN npm install
+RUN npm run client-install
 # Bundle app source
 COPY . .
 # replace this with your application's default port
